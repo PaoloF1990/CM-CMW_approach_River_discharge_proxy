@@ -22,13 +22,10 @@ import os
 # %% Input
 
 # USER GEE login https://developers.google.com/earth-engine/guides/service_account
-#service_account = 'addyourGEEserviceaccount'
-#credentials = ee.ServiceAccountCredentials(service_account, 'addpathtoyourGEEcredentials')
-service_account = 'riverdischarge@riverdischarge1.iam.gserviceaccount.com'
-credentials = ee.ServiceAccountCredentials(service_account, 'F:/z_scambio_files/IRPI CNR Dropbox/Paolo Filippucci/File di paolo.filippucci@irpi.cnr.it/GEE/riverdischarge1-35925bb5bef6.json')
+service_account = 'addyourGEEserviceaccount'
+credentials = ee.ServiceAccountCredentials(service_account, 'addpathtoyourGEEcredentials')
 ee.Initialize(credentials)
-#folderGEE='addyourprojectpath'; #e.g.: projects/riverdischarge/assets/research
-folderGEE='projects/riverdischarge1/assets/prova'; #e.g.: projects/riverdischarge/assets/research
+folderGEE='addyourprojectpath'; #e.g.: projects/riverdischarge/assets/research
 
 # Select desired features
 extr_video=0                                             #put 1 to extract gif of calibration period
@@ -44,8 +41,7 @@ pix_Mcal_k2_CMW=1                                        #put 1 to extract the c
 # Parameters (can be changed)
 ray=0.075                                                #half the side of the square centered in the coordinates
 snowthre=10                                              #threshold on max snow probability
-#folder_pc='addthepathtoyoursavingfolder'                 #folder where to save the data
-folder_pc='F:/z_scambio_files/IRPI CNR Dropbox/BACKUP/CURRENT_USERS/p.filippucci/angelica/CCI_discharge'
+folder_pc='addthepathtoyoursavingfolder'                 #folder where to save the data
 
 
 # USER insert below station name, central area coordinates and river coordinates

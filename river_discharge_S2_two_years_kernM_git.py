@@ -21,14 +21,11 @@ from scipy.io import loadmat as loadmat2
 # %% Input
 
 # USER GEE login https://developers.google.com/earth-engine/guides/service_account
-#service_account = 'addyourGEEserviceaccount'
-#credentials = ee.ServiceAccountCredentials(service_account, 'addpathtoyourGEEcredentials')
-service_account = 'riverdischarge@riverdischarge1.iam.gserviceaccount.com'
-credentials = ee.ServiceAccountCredentials(service_account, 'F:/z_scambio_files/IRPI CNR Dropbox/Paolo Filippucci/File di paolo.filippucci@irpi.cnr.it/GEE/riverdischarge1-35925bb5bef6.json')
+service_account = 'addyourGEEserviceaccount'
+credentials = ee.ServiceAccountCredentials(service_account, 'addpathtoyourGEEcredentials')
 
 ee.Initialize(credentials)
-#folderGEE='addyourprojectpath'; #e.g.: projects/riverdischarge/assets/research
-folderGEE='projects/riverdischarge1/assets/prova'; #e.g.: projects/riverdischarge/assets/research
+folderGEE='addyourprojectpath'; #e.g.: projects/riverdischarge/assets/research
 
 # Select desired features
 extr_video=0                                             #put 1 to extract gif of calibration period
@@ -44,9 +41,7 @@ pix_Mcal_k2_CMW=1                                        #put 1 to extract the c
 # Parameters (can be changed)
 ray=0.020                                                #half the side of the square centered in the coordinates
 snowthre=10                                              #threshold on max snow probability
-#folder_pc='addthepathtoyoursavingfolder'                 #folder where to save the data
-folder_pc='F:/z_scambio_files/IRPI CNR Dropbox/BACKUP/CURRENT_USERS/p.filippucci/angelica/CCI_discharge'
-
+folder_pc='addthepathtoyoursavingfolder'                 #folder where to save the data
 
 # USER insert below station name, central area coordinates and river coordinates
 # below and example with data and coordinated for Pontelagoscuro
@@ -67,8 +62,8 @@ nar=0                                                      #1 if the river is to
 years_cal=[2016,2019]                                      #Calibration period (has to be < 5000 days)
 years=[2000,2005,2010,2015,2020,2022]                      #Extraction periods (divided to reduce the computating weight)
 self_Wat=0                                                 #equal to 1 if water detecting algorithm do not work. insert river central line in coordW
-hydro0='Discharge'                                          #name of the observed variable
-hydro='Dis'                                               #code of the observed variable
+hydro0='Discharge'                                         #name of the observed variable
+hydro='Dis'                                                #code of the observed variable
 coordW=[[11.596556646173383, 44.889278173147744],
         [11.625781995599652, 44.888366036430725],
         [11.612436, 44.888439]]                            #water pixel coordinates
